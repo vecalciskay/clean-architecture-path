@@ -1,0 +1,28 @@
+﻿@model InjectionPattern.Models.Persona
+
+    <div class="text-center">
+        
+        @{
+            var titlePage = Model.WithInjection ? "With " : "Without ";
+            var linkSwitch = Model.WithInjection ? "/Home/Index/1" : "/Home/Index";
+        }
+        <h1 class="display-4">
+            @titlePage  Injection
+        </h1>
+        <p>
+            Here it is the content of the model:
+        </p>
+        <p>
+            <ul>
+                <li>
+                    <b>Name: </b>@Model.Nombre
+                </li>
+                <li>
+                    <b>Today is: </b>@Model.HoyDia.ToShortDateString()
+                </li>
+            </ul>
+        </p>
+        <p>
+            <a href="@linkSwitch">Switch</a>
+        </p>
+    </div>
