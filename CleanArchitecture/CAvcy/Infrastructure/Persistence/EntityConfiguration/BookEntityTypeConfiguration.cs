@@ -16,6 +16,9 @@ namespace Infrastructure.Persistence.EntityConfiguration
                 .Property(y => y.Value)
                 .HasColumnName("Title")
                 .HasMaxLength(500);
+            builder.Property(x => x.TimeStamp)
+                .HasColumnName("Timestamp")
+                .IsRowVersion();
             //builder.OwnsOne(x => x.CurrentBookReaderId);
             //builder.OwnsMany(x => x.HistoryLents);
         }

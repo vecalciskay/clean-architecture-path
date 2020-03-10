@@ -17,6 +17,7 @@ namespace Domain
         public StatusLent Status { get; private set; }
         public List<BookLend> HistoryLents { get; private set; }
 
+        public byte[] TimeStamp { get; set; }
         public Book()
         {
             HistoryLents = new List<BookLend>();
