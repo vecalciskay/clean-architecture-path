@@ -11,12 +11,12 @@ using Framework;
 namespace webAPI.Controllers.Books
 {
     [Route("api/books")]
-    public class BookReaderCommandAPI : Controller
+    public class BookCommandAPI : Controller
     {
         private readonly IApplicationService _applicationService;
-        private static readonly ILogger _log = Serilog.Log.ForContext<BookReaderCommandAPI>();
+        private static readonly ILogger _log = Serilog.Log.ForContext<BookCommandAPI>();
 
-        public BookReaderCommandAPI(IApplicationService applicationService)
+        public BookCommandAPI(IApplicationService applicationService)
             => _applicationService = applicationService;
 
         // POST api/<controller>
